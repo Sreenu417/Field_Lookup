@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>insert_access</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="access">name</label>
+            <select name="name" id="name"><br>
+            {% for to in webpage %}
+                <option value="{{to}}">{{to.name}}</option>
+
+            {% endfor %}
+            </select>
+            <label for="date">date</label>
+            <input type="date" name="date" id="date">
+
+        <input type="submit" value="insert_access"> 
+        </form>    
+    </body>
