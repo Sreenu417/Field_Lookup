@@ -15,8 +15,8 @@
         {% csrf_token %}
         <label for="topic">topic_name</label>
         <select name="topic" id="topic">
-            {% for to in topics %}
-                <option value="{{to}}">{{to.topic_name}}</option>
+            {% for i in topics %}
+                <option value="{{i}}">{{i.topic_name}}</option>
 
             {% endfor %}
         </select><br>
