@@ -15,8 +15,8 @@
             {% csrf_token %}
             <label for="access">name</label>
             <select name="name" id="name"><br>
-            {% for to in webpage %}
-                <option value="{{to}}">{{to.name}}</option>
+            {% for a in webpage %}
+                <option value="{{a}}">{{a.name}}</option>
 
             {% endfor %}
             </select>
